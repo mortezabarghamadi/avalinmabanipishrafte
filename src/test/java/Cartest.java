@@ -32,7 +32,7 @@ public class Cartest {
                     System.out.println("mashin dar hal harekat ast");
                 } else {
                     System.out.println("mashin dar ha harekat nist");
-                }
+                } // mashn test kamel nist
 
             }
         }
