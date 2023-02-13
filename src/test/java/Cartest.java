@@ -1,11 +1,47 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class Cartest {
+    @Test
+    void AmalkardMashin() {
+        Mashin mustang = new Mashin("mustang");
+        Mashin benz = new Mashin("benz");
 
-            class carrrrtest {
+        boolean ayaMustangHarekatMikonad = mustang.ayaharekatmikonad();
+        benz.roshanKardanmashin();
+        boolean ayabenzHarekatMikonad = benz.ayaharekatmikonad();
+        Assertions.assertFalse(ayaMustangHarekatMikonad);
+        Assertions.assertTrue(ayabenzHarekatMikonad);
+
+
+//        Mashin mashin = new Mashin();
+//        mashin.bastanDar();
+//        System.out.println("aya dar mashin baz ast?"+mashin.ayadarmashinbazast);
+//        mashin.khamoshKardanmashin();
+//        System.out.println("aya mashin roshan ast?"+mashin.ayaMashinRoshanAst);
+//        mashin.harekat();
+//        System.out.println("...................................................");
+//        Mashin camaro = new Mashin("camaro");
+//        camaro.bastanDar();
+//        System.out.println("aya dar mashin baz ast?"+camaro.ayadarmashinbazast);
+//        camaro.roshanKardanmashin();
+//        System.out.println("aya mashin roshan ast?"+camaro.ayaMashinRoshanAst);
+//        camaro.harekat();
+    }
+
+            class Mashin {
 
             boolean ayaMashinRoshanAst;
             boolean ayadarmashinbazast;
+            String mark;
+            Mashin(){
+                System.out.println("yek mashin jadid darim");
+            }
+            Mashin(String mark){
+                this.mark = mark;
+                System.out.println("mashin mord nazar " + this.mark +   " camaro ast");
+            }
+
 
             void BazKardanDar() {
                 System.out.println("dar baz ast");
@@ -27,12 +63,14 @@ public class Cartest {
                 ayaMashinRoshanAst = false;
             }
 
-            void harekat() {
-                if (!ayaMashinRoshanAst && ayadarmashinbazast) {
+            boolean ayaharekatmikonad() {
+                if ( ayaMashinRoshanAst && !ayadarmashinbazast) {
                     System.out.println("mashin dar hal harekat ast");
+                    return true;
                 } else {
-                    System.out.println("mashin dar ha harekat nist");
-                } // mashn test kamel nist
+                    System.out.println("mashin park shode ast");
+                    return false;
+                } // mashin test kamel nist
 
             }
         }
