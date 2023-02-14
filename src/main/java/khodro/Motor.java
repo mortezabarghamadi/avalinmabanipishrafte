@@ -1,15 +1,9 @@
 package khodro;
 
-public class Motor {
-    boolean ayaRoshanAst;
-
-    public void roshanKardan() {
-        ayaRoshanAst = true;
-    }
-
-    public void khamoshKardan() {
-        ayaRoshanAst = false;
-    }
+public class Motor extends Khodro{
+  public void markkhodro(){
+      System.out.println(name);
+  }
 
     public boolean ayaharekatmikonad() {
         return ayaRoshanAst;

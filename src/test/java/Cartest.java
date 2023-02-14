@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 public class Cartest {
     @Test
     void AmalkardMashin() {
+        Mashin mashin = new Mashin();
         Mashin mustang = new Mashin("mustang");
         Mashin benz = new Mashin("benz");
 
@@ -14,6 +15,7 @@ public class Cartest {
         boolean ayabenzHarekatMikonad = benz.ayaharekatmikonad();
         Assertions.assertFalse(ayaHarekatMikonad);
         Assertions.assertTrue(ayabenzHarekatMikonad);
+        mashin.markkhodro();
 
         Rannade rannade = new Rannade();
 //       mashin.Mashin mashin = new mashin.Mashin();

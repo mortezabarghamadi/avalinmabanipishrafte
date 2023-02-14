@@ -8,5 +8,6 @@ public class MotorCycle {
         Motor motor = new Motor();
         boolean ayaHarekatMikonad = motor.ayaharekatmikonad();
         Assertions.assertFalse(ayaHarekatMikonad);
+        motor.markkhodro();
     }
 }

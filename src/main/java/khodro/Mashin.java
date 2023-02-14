@@ -1,14 +1,16 @@
 package khodro;
 
-public class Mashin {
-    boolean ayaRoshanAst;
+public class Mashin extends Khodro {
     boolean ayadarbazast;
     String mark;
     Rannade rannade;
-    Mashin(){
+    public Mashin(){
     }
     public Mashin(String mark){
         this.mark = mark;
+    }
+    public void markkhodro(){
+        System.out.println(name);
     }
 
 
@@ -19,13 +21,6 @@ public class Mashin {
         ayadarbazast = false;
     }
 
-    public void roshanKardan() {
-        ayaRoshanAst = true;
-    }
-
-    public void khamoshKardan() {
-        ayaRoshanAst = false;
-    }
     public boolean ayaharekatmikonad() {
         if (ayaRoshanAst && !ayadarbazast) {
             return true;
