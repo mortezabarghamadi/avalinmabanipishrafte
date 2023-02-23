@@ -1,9 +1,9 @@
 package khodro;
 
 public class Motor extends Khodro{
-    String mark;
-    int sorat;
-    String noemotor;
+    private String mark;
+    private int sorat;
+    private String noemotor;
     public Motor(String mark, int sorat, String noemotor) {
     this.mark=mark;
     this.sorat=sorat;

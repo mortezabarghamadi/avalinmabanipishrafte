@@ -1,12 +1,12 @@
 package khodro;
 
 public  class Mashin extends Khodro implements Tormoz,Sorat{
-    boolean ayadarbazast;
 
-    String mark;
-    int shetabmashin;
-    String dande;
-    Rannade rannade;
+    private boolean ayadarbazast;
+    private String mark;
+    private int shetabmashin;
+    private String dande;
+    private Rannade rannade;
 
      public Mashin(){
     }

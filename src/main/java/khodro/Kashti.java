@@ -1,7 +1,7 @@
 package khodro;
 
 public class Kashti extends Khodro {
-    String mark;
+    private String mark;
 
     public Kashti(String mark) {
         this.mark=mark;
