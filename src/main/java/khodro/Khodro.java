@@ -16,7 +16,7 @@ public abstract class Khodro {
 
     public abstract boolean ayaharekatmikonad();
 
-    public abstract void markkhodro();
+//    public abstract void markkhodro();
 
     public abstract String getmark();
 }
