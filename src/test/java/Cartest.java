@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class Cartest {
     @Test
     void AmalkardMashin() {
-        Mashin mashin = new Mashin();
+
         Mashin mustang = new Mashin("mustang");
         Mashin benz = new Mashin("benz");
 
@@ -15,9 +15,14 @@ public class Cartest {
         boolean ayabenzHarekatMikonad = benz.ayaharekatmikonad();
         Assertions.assertFalse(ayaHarekatMikonad);
         Assertions.assertTrue(ayabenzHarekatMikonad);
-        mashin.markkhodro();
+        mustang.typetormoz();
+        mustang.shetab();
+        benz.typetormoz();
+        benz.shetab();
 
         Rannade rannade = new Rannade();
+    }
+}
 //       mashin.Mashin mashin = new mashin.Mashin();
 //       mashin.bastanDar();
 //        System.out.println("aya dar mashin baz ast?"+mashin.ayadarmashinbazast);
@@ -31,7 +36,3 @@ public class Cartest {
 //        camaro.roshanKardanmashin();
 //        System.out.println("aya mashin roshan ast?"+camaro.ayaMashinRoshanAst);
 //        camaro.ayaharekatmikonad();
-    }
-}
-
-
