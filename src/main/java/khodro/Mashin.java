@@ -6,7 +6,8 @@ public  class Mashin extends Khodro implements Tormoz,Sorat{
     private String mark;
     private int shetabmashin;
     private String dande;
-    private Rannade rannade;
+
+    public static int tedadforosh;
 
      public Mashin(){
     }
