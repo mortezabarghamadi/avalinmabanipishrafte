@@ -1,4 +1,5 @@
-import khodro.Mashin;
+import khodro.mashin.Dande;
+import khodro.mashin.Mashin;
 
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ public class Main {
         }
             String mark = args[0];
             String sorsat = args[1];
-            String noedande = args[2];
+            Dande noedande = Dande.valueOf(args[2]);
             Mashin mashin = new Mashin(mark, Integer.parseInt(sorsat), noedande);
          if (mashin.ayaharekatmikonad()){
             System.out.println("mashin harekat mikonad");

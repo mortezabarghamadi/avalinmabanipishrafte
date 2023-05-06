@@ -16,12 +16,10 @@ public class Calculator {
         double subtraction= b1 - b2;
         return String.valueOf(subtraction);
     }
-
-
     public String multi(String adadavalc, String adaddovomc) {
-       double c1=Double.parseDouble(adadavalc);
-       double c2= Double.parseDouble(adaddovomc);
-       double mulltiply=c1*c2;
+        double c1=Double.parseDouble(adadavalc);
+        double c2= Double.parseDouble(adaddovomc);
+        double mulltiply=c1*c2;
         return String.valueOf(mulltiply);
     }
 }

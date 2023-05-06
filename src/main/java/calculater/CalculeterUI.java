@@ -1,18 +1,18 @@
 package calculater;
 
+//import com.sun.org.apache.xpath.internal.operations.Operation;
+
 import javax.swing.*;
 
 public class CalculeterUI {
     private static JTextField jTextField;
     private static String adadAval;
-    private static String adadAval1;
-    private static String adadAval2;
+    private static JButton operation ;
     public static void main(String[] args){
         JFrame mashinhesab = new JFrame("mashin hesab");
         jTextField = new JTextField();
         jTextField.setBounds(0,0,150,50);
         jTextField.setEditable(false);
-
         JButton cancel = new JButton("C");
         cancel.setBounds(150,0,50,50);
         cancel.addActionListener(event-> jTextField.setText(""));
@@ -34,7 +34,7 @@ public class CalculeterUI {
         JButton minus = new JButton("-");
         minus.setBounds(150,100,50,50);
         minus.addActionListener(e -> {
-                adadAval1=jTextField.getText();
+                adadAval=jTextField.getText();
                 jTextField.setText("");
         });
         JButton seven = getButton("7", 0, 150);
@@ -44,7 +44,7 @@ public class CalculeterUI {
         JButton multiply = new JButton("*");
         multiply.setBounds(150,150,50,50);
         multiply.addActionListener(e -> {
-            adadAval2=jTextField.getText();
+            adadAval=jTextField.getText();
             jTextField.setText("");
         });
 
@@ -54,17 +54,19 @@ public class CalculeterUI {
         JButton equal = new JButton("=");
         equal.setBounds(100,200,50,50);
         equal.addActionListener(e -> {
+                                ;
+            if(operation==plus){
             Calculator calculator = new Calculator();
             String addResult = calculator.add(adadAval, jTextField.getText());
-            jTextField.setText(addResult);});
-             equal.addActionListener(e1 -> {
+            jTextField.setText(addResult);}
+             else if (operation==minus) {
                 Calculator calculator1 = new Calculator();
-                String subtResult = calculator1.subt(adadAval1, jTextField.getText());
-                jTextField.setText(subtResult);});
-              equal.addActionListener(e2 -> {
-               Calculator calculator2=new Calculator();
-                String multiresult =calculator2.multi(adadAval2,jTextField.getText());
-                jTextField.setText(multiresult);});
+                String subtResult = calculator1.subt(adadAval, jTextField.getText());
+                jTextField.setText(subtResult);}
+             else {
+                 Calculator calculator = new Calculator();
+                 String multiresult =calculator.multi(adadAval,jTextField.getText());
+                jTextField.setText(multiresult);}});
 
 
         JButton division = new JButton("/");
