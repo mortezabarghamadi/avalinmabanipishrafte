@@ -3,6 +3,7 @@ package compare;
 import khodro.Khodro;
 import khodro.mashin.Dande;
 import khodro.mashin.Mashin;
+import khodro.mashin.MashinComprator;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -39,6 +40,27 @@ public class CompareMashinetest {
     }
 
     @Test
+    void shuld_sort_mashins_by_comprator() {
+        Mashin bmw =new Mashin("bmw",240, Dande.MANUAL);
+        Mashin saipa =new Mashin("saipa",220, Dande.AUTOMATIC);
+        Mashin ford =new Mashin("ford",280, Dande.MANUAL);
+        Mashin mustang =new Mashin("mustang",260, Dande.AUTOMATIC);
+        ArrayList<Mashin> mashins = new ArrayList<>();
+        mashins.add(bmw);
+        mashins.add(ford);
+        mashins.add(mustang);
+        mashins.add(saipa);
+        Collections.sort(mashins,new MashinComprator());
+        ArrayList<Mashin> expectedmashins = new ArrayList<>();
+        expectedmashins.add(bmw);
+        expectedmashins.add(ford);
+        expectedmashins.add(mustang);
+        expectedmashins.add(saipa);
+
+
+    }
+
+    @Test
     void map_test() {
         Mashin bmw1 =new Mashin("bmw1",240, Dande.MANUAL);
         Mashin bmw2 =new Mashin("bmw2",220, Dande.AUTOMATIC);
@@ -56,4 +78,7 @@ public class CompareMashinetest {
             System.out.println(key.getmark() +" modele "+ value);
 
     }
-}}
+
+
+        }
+}
